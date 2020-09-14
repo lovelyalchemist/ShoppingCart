@@ -1,0 +1,50 @@
+{
+    "productionlist": [{
+            "image": "example-picture.jpg",
+            "name": "Ürün - 1 Olarak Geçen İsim",
+            "price": "89.90TL",
+            "isAvailable": true
+        },
+        {
+            "image": "example-picture2.jpg",
+            "name": "Ürün - 2 Olarak Geçen İsim",
+            "price": "189.90TL",
+            "isAvailable": false
+        }
+    ],
+    "saved": [
+        {
+            "image": "example-picture.jpg",
+            "name": "Ürün - 3 Olarak Geçen İsim",
+            "price": "189.90TL",
+            "isAvailable": true
+        }
+    ],
+    "smilary": [
+        {
+            "image": "example-picture3.jpg",
+            "name": "Ürün - 4 Olarak Geçen İsmi",
+            "price": "12.90TL",
+            "isAvailable": true
+        },
+        {
+            "image": "example-picture2.jpg",
+            "name": "Ürün - 5 Olarak Geçen İsmi",
+            "price": "42.00TL",
+            "isAvailable": true
+        },
+        {
+            "image": "example-picture.jpg",
+            "name": "Ürün - 6 Olarak Geçen İsmi",
+            "price": "42.00TL",
+            "isAvailable": true
+        },
+        {
+            "image": "example-picture3.jpg",
+            "name": "Ürün - 7 Olarak Geçen İsmi",
+            "price": "42.00TL",
+            "isAvailable": true
+        }
+        
+    ]
+}

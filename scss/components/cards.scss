@@ -1,0 +1,67 @@
+
+@import 'abstracts/mixins.scss';
+@import 'base/typography.scss',
+'base/colors.scss';
+$card-border-width:   1px;
+
+$card-radius:         6px;
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @include breakpoint(mobile) {
+      justify-content: center;
+    }
+  }
+  
+    .cards_item {
+      display: flex;
+      justify-content: center;
+      margin: 8px;
+      background-color: $card-background;
+      border: $card-border-width solid $card-border-color;
+      border-radius: $card-radius;
+      box-shadow: 0 6px 10px rgba(67, 66, 66, 0.28);
+      margin-top: 0;
+      padding: 2em;
+      clear: both;
+      flex: 1;
+      @include breakpoint(tablet) {
+        flex: 2;
+      }
+      @include breakpoint(mobile) {
+        flex: 3;
+      }
+      
+    }
+  
+      .card {
+        display: flex;
+        flex-direction: column;
+        
+      }
+  
+        .card_image {
+          img {
+            width: 100%;
+            border-top-left-radius: ( $card-radius - $card-border-width );
+            border-top-right-radius: ( $card-radius - $card-border-width );
+            max-width: 100%;
+          }
+        }
+  
+        .card_content {
+          display: flex;
+          flex: 1 0 auto;
+          flex-direction: column;
+          text-align: center;
+          margin-top: 0;
+          
+          p {
+            flex: 1 0 auto;
+          }
+          
+        }

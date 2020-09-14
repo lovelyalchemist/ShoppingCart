@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Alışveriş Sepeti</title>
+	<meta name="description" content="Örnek Sepet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="./css/main.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="js/main.js"></script>
+</head>
+
+<body>
+	<section class="section-shopping-card" id="app">
+		<div class="shopinglist">
+			<p v-if="isLoading">Yükleniyor</p>
+			<div class="shopping-card-part">
+				<h1 class="underline">Alışveriş Sepetiniz</h1>
+				<div class="empty-card-info" v-if="!productionlist.length">
+					<p>Sepetiniz şu anda boş :/.</p>
+				</div>
+				<div class="list-part">
+					<ul class="productionlist">
+						<li class="item" v-for="(item, index) in productionlist">
+							<div class="img-part">
+								<img v-bind:src="'/img/' + item.image" width="136px" height="136px">
+							</div>
+							<div class="content-part">
+								<h2>{{item.name}}</h2>
+								<span class="stock-info positive" v-if="item.isAvailable"> Stokta Var</span>
+								<span class="stock-info negative" v-if="!item.isAvailable">Stokta Yok</span>
+								<div class="others">
+									<div class="production-number">
+										<button type="button" class="button button-number"
+											v-on:click="decrease">-</button>
+										<span class="number">{{ counter }}</span>
+										<button type="button" class="button button-number"
+											v-on:click="increase">+</button>
+									</div>
+									<div class="checkbox info-gift ">
+										<input type="checkbox" id="cb" class="regular-cb info">
+										<label class="cb-text" for="cb">
+											<!-- {{ checked }} -->Hediye Paketi Olsun Mu? </label>
+										<span>{{ checkedGiftpackage }}</span>
+
+									</div>
+								</div>
+								<div class="buttons">
+									<button type="button" class="button button-secondary"
+										v-on:click="removeFromProductionlist(index)">Sil</button>
+									<button type="button" class="button button-secondary"
+										v-on:click="saveForLater(index)">Daha Sonra Al</button>
+								</div>
+							</div>
+							<div class="result-part">
+								<span class="price">
+									<h1>{{item.price}}</h1>
+								</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="shopping-later-part">
+				<h1 class="underline">Daha Sonra Alacaklarınız</h1>
+				<div class="empty-card-info" v-if="!saved.length">
+					<p>Listenizde ürün bulunmuyor.</p>
+				</div>
+				<div class="list-part">
+					<ul class="productionlist">
+						<li class="item" v-for="(item, index) in saved">
+							<div class="img-part">
+								<img v-bind:src="'/img/' + item.image" width="136px" height="136px">
+							</div>
+							<div class="content-part">
+								<h2>{{item.name}}</h2>
+								<span class="stock-info positive" v-if="item.isAvailable"> Stokta Var</span>
+								<span class="stock-info negative" v-if="!item.isAvailable">Stokta Yok</span>
+								<div class="others">
+									<div class="production-number">
+										<button type="button" class="button button-number"
+											v-on:click="decrease">-</button>
+										<span class="number">{{ counter }}</span>
+										<button type="button" class="button button-number"
+											v-on:click="increase">+</button>
+									</div>
+									<div class="checkbox info-gift">
+										<input type="checkbox" id="cb" class="regular-cb info">
+										<label class="cb-text" for="cb">Hediye Paketi Olsun Mu? </label>
+									</div>
+								</div>
+								<div class="buttons">
+									<button type="button" class="button button-secondary"
+										v-on:click="removeFromSavedList(index)">Sil</button>
+									<button type="button" class="button button-secondary"
+										v-on:click="moveToProductionlist(index)">Sepete Ekle</button>
+								</div>
+							</div>
+							<div class="result-part">
+								<span class="price">
+									<h1>{{item.price}}</h1>
+								</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="production-smilary-part">
+				<h1 class="underline">Benzer Ürünler</h1>
+				<div class="smilary-cards">
+					<ul class="cards">
+						<li class="cards_item" v-for="(item, index) in smilary">
+							<div class="card">
+
+								<div class="card_image">
+									<img v-bind:src="'/img/' + item.image" width="104px">
+								</div>
+
+								<div class="card_content">
+									<h2 class="card_heading">{{item.name}}</h2>
+									<h2>{{item.price}}</h2>
+									<button type="button" class="button-block button-primary"
+										v-on:click="moveToProductionlistfromSmilary(index)">Sepete Ekle</button>
+									<button type="button" class="button-block button-secondary"
+										v-on:click="removeFromSmilaryList(index)">Sil</button>
+								</div>
+
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="shoping-summary">
+			<h2> Sipariş Özetiniz</h2>
+			<div class="total-price">
+				<p>Ödenecek Tutar</p>
+				<h1>
+					<!-- 899,00TL -->{{productionlistTotal}}TL</h1>
+			</div>
+			<div class="shipping-price">
+				<p>Kargo Ücreti</p>
+				<h1>0,00TL</h1>
+			</div>
+			<div class="buttons"><button type="button" class="button button-primary">Alışverişi Tamamla</div>
+		</div>
+	</section>
+
+</body>
+
+</html>

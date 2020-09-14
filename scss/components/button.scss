@@ -1,0 +1,43 @@
+.button {
+    padding: .75em;
+    margin: .75em 0;
+&:hover {
+    background-color: $darkorange;
+    border-color: $darkorange;
+    color: white;
+}
+}
+
+.button-secondary {
+    background-color: white;
+    border: 1px solid $yellow;
+    color: $gray;
+    border-radius: 6px;
+}
+
+.button-primary {
+    background-color: $orange;
+    border: 1px solid $orange;
+    color: white;
+    border-radius: 6px;
+}
+
+.button-number {
+    background-color: transparent;
+    border: 1px solid $black-gray;
+    padding: .25em .5em;
+    border-radius: 2px;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.button-block {
+    display: block;
+    padding: .75em;
+    margin: .75em 0;
+&:hover {
+    background-color: $darkorange;
+    border-color: $darkorange;
+    color: white;
+}
+}
