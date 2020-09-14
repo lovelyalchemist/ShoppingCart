@@ -277,6 +277,10 @@ p {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   max-width: 100%; }
+@media (max-width: 37.5em) {
+  .card_image {
+    width: 96px;
+    align-self: center; } }
 
 .card_content {
   display: flex;
@@ -361,7 +365,7 @@ body {
           .section-shopping-card .shopinglist .list-part ul.productionlist li.item .content-part {
             padding: .5em; } }
         .section-shopping-card .shopinglist .list-part ul.productionlist li.item .content-part .number {
-          padding: 6px 24px;
+          padding: 6px 16px;
           border-bottom: 1px solid #343434;
           font-family: "Montserrat";
           font-weight: 500;

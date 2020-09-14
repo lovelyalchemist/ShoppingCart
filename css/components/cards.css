@@ -138,6 +138,10 @@ p {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   max-width: 100%; }
+@media (max-width: 37.5em) {
+  .card_image {
+    width: 96px;
+    align-self: center; } }
 
 .card_content {
   display: flex;

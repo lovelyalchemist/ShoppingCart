@@ -51,6 +51,10 @@ $card-radius:         6px;
             border-top-right-radius: ( $card-radius - $card-border-width );
             max-width: 100%;
           }
+          @include breakpoint(mobile) {
+            width: 96px;
+            align-self: center;
+          }
         }
   
         .card_content {
