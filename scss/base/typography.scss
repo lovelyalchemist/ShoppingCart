@@ -51,7 +51,7 @@ h1 {
     }
     */
     @include breakpoint(mobile) {
-        font-size: 22px;
+        font-size: 20px;
         margin: 12px 6px;
     }
 }
@@ -70,7 +70,7 @@ h2 {
     font-size: 24px;
     margin: 6px 0;
     @include breakpoint(mobile) {
-        font-size: 20px;
+        font-size: 18px;
         margin: 8px;
     }
 }
@@ -80,7 +80,7 @@ h3,
     font-family: "Montserrat";
     font-weight: 500;
     color: $gray;
-    font-size: 20px;
+    font-size: 18px;
     @include breakpoint(mobile) {
         font-size: 18px;
     }

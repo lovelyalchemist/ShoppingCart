@@ -39,7 +39,7 @@ h1 {
   */ }
   @media (max-width: 37.5em) {
     h1 {
-      font-size: 22px;
+      font-size: 20px;
       margin: 12px 6px; } }
 
 .underline {
@@ -54,7 +54,7 @@ h2 {
   margin: 6px 0; }
   @media (max-width: 37.5em) {
     h2 {
-      font-size: 20px;
+      font-size: 18px;
       margin: 8px; } }
 
 h3,
@@ -62,7 +62,7 @@ h3,
   font-family: "Montserrat";
   font-weight: 500;
   color: #545454;
-  font-size: 20px; }
+  font-size: 18px; }
   @media (max-width: 37.5em) {
     h3,
     .card_heading {

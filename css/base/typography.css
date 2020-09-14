@@ -9,7 +9,7 @@ Error: Undefined mixin 'breakpoint'.
 51:     }
 52:     *\/
 53:     @include breakpoint(mobile) {
-54:         font-size: 22px;
+54:         font-size: 20px;
 55:         margin: 12px 6px;
 56:     }
 57: }
@@ -73,4 +73,4 @@ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/interna
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'breakpoint'.\A         on line 53 of scss/base/typography.scss, in `breakpoint'\A         from line 53 of scss/base/typography.scss\A \A 48:         content: '';\A 49:         width: 100%;\A 50:         border-bottom: 2px solid $orange;\A 51:     }\A 52:     */\A 53:     @include breakpoint(mobile) {\A 54:         font-size: 22px;\A 55:         margin: 12px 6px;\A 56:     }\A 57: }\A 58: "; }
+  content: "Error: Undefined mixin 'breakpoint'.\A         on line 53 of scss/base/typography.scss, in `breakpoint'\A         from line 53 of scss/base/typography.scss\A \A 48:         content: '';\A 49:         width: 100%;\A 50:         border-bottom: 2px solid $orange;\A 51:     }\A 52:     */\A 53:     @include breakpoint(mobile) {\A 54:         font-size: 20px;\A 55:         margin: 12px 6px;\A 56:     }\A 57: }\A 58: "; }

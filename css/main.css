@@ -39,7 +39,7 @@ h1 {
   */ }
   @media (max-width: 37.5em) {
     h1 {
-      font-size: 22px;
+      font-size: 20px;
       margin: 12px 6px; } }
 
 .underline {
@@ -54,7 +54,7 @@ h2 {
   margin: 6px 0; }
   @media (max-width: 37.5em) {
     h2 {
-      font-size: 20px;
+      font-size: 18px;
       margin: 8px; } }
 
 h3,
@@ -62,7 +62,7 @@ h3,
   font-family: "Montserrat";
   font-weight: 500;
   color: #545454;
-  font-size: 20px; }
+  font-size: 18px; }
   @media (max-width: 37.5em) {
     h3,
     .card_heading {
@@ -178,7 +178,7 @@ h1 {
   */ }
   @media (max-width: 37.5em) {
     h1 {
-      font-size: 22px;
+      font-size: 20px;
       margin: 12px 6px; } }
 
 .underline {
@@ -193,7 +193,7 @@ h2 {
   margin: 6px 0; }
   @media (max-width: 37.5em) {
     h2 {
-      font-size: 20px;
+      font-size: 18px;
       margin: 8px; } }
 
 h3,
@@ -201,7 +201,7 @@ h3,
   font-family: "Montserrat";
   font-weight: 500;
   color: #545454;
-  font-size: 20px; }
+  font-size: 18px; }
   @media (max-width: 37.5em) {
     h3,
     .card_heading {
@@ -342,47 +342,52 @@ body {
   .section-shopping-card .shopinglist {
     flex: 2 1 auto;
     padding-right: 24px; }
-    .section-shopping-card .shopinglist .list-part ul.productionlist li.item {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      -ms-flex-direction: row;
-      padding: 24px 0;
-      border-bottom: 1px solid #D2D2D2; }
-      .section-shopping-card .shopinglist .list-part ul.productionlist li.item .img-part {
-        margin: 8px; }
-        .section-shopping-card .shopinglist .list-part ul.productionlist li.item .img-part img {
-          border: 1px solid #D2D2D2;
-          border-radius: 2px; }
+    .section-shopping-card .shopinglist .list-part ul.productionlist {
+      padding-left: 16px; }
+      @media (max-width: 37.5em) {
+        .section-shopping-card .shopinglist .list-part ul.productionlist {
+          padding-left: 0; } }
+      .section-shopping-card .shopinglist .list-part ul.productionlist li.item {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        -ms-flex-direction: row;
+        padding: 24px 0;
+        border-bottom: 1px solid #D2D2D2; }
+        .section-shopping-card .shopinglist .list-part ul.productionlist li.item .img-part {
+          margin: 8px; }
+          .section-shopping-card .shopinglist .list-part ul.productionlist li.item .img-part img {
+            border: 1px solid #D2D2D2;
+            border-radius: 2px; }
+            @media (max-width: 37.5em) {
+              .section-shopping-card .shopinglist .list-part ul.productionlist li.item .img-part img {
+                width: 72px;
+                height: 72px; } }
+        .section-shopping-card .shopinglist .list-part ul.productionlist li.item .content-part {
+          flex: 2;
+          padding-left: 2em; }
           @media (max-width: 37.5em) {
-            .section-shopping-card .shopinglist .list-part ul.productionlist li.item .img-part img {
-              width: 72px;
-              height: 72px; } }
-      .section-shopping-card .shopinglist .list-part ul.productionlist li.item .content-part {
-        flex: 2;
-        padding-left: 2em; }
-        @media (max-width: 37.5em) {
-          .section-shopping-card .shopinglist .list-part ul.productionlist li.item .content-part {
-            padding: .5em; } }
-        .section-shopping-card .shopinglist .list-part ul.productionlist li.item .content-part .number {
-          padding: 6px 16px;
-          border-bottom: 1px solid #343434;
-          font-family: "Montserrat";
-          font-weight: 500;
-          color: #545454;
-          font-size: 16px; }
-        .section-shopping-card .shopinglist .list-part ul.productionlist li.item .content-part .production-number {
-          padding-right: 8px; }
-        .section-shopping-card .shopinglist .list-part ul.productionlist li.item .content-part .others {
-          display: flex;
-          flex-wrap: nowrap;
-          padding: 16px 0; }
-          @media (max-width: 37.5em) {
-            .section-shopping-card .shopinglist .list-part ul.productionlist li.item .content-part .others {
-              flex-wrap: wrap; } }
-      .section-shopping-card .shopinglist .list-part ul.productionlist li.item .result-part {
-        align-content: flex-end;
-        align-items: flex-end; }
+            .section-shopping-card .shopinglist .list-part ul.productionlist li.item .content-part {
+              padding: .5em; } }
+          .section-shopping-card .shopinglist .list-part ul.productionlist li.item .content-part .number {
+            padding: 6px 16px;
+            border-bottom: 1px solid #343434;
+            font-family: "Montserrat";
+            font-weight: 500;
+            color: #545454;
+            font-size: 16px; }
+          .section-shopping-card .shopinglist .list-part ul.productionlist li.item .content-part .production-number {
+            padding-right: 8px; }
+          .section-shopping-card .shopinglist .list-part ul.productionlist li.item .content-part .others {
+            display: flex;
+            flex-wrap: nowrap;
+            padding: 16px 0; }
+            @media (max-width: 37.5em) {
+              .section-shopping-card .shopinglist .list-part ul.productionlist li.item .content-part .others {
+                flex-wrap: wrap; } }
+        .section-shopping-card .shopinglist .list-part ul.productionlist li.item .result-part {
+          align-content: flex-end;
+          align-items: flex-end; }
   .section-shopping-card .empty-card-info {
     padding: 16px;
     background-color: #D2D2D2;
