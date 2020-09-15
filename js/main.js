@@ -7,9 +7,9 @@ window.addEventListener('load', () => {
             isLoading: true,
             productionlist: [],
             saved: [],
-            smilary:[],
-            qty:1,
-           // checked: 'Hediye Paketi Olsun',
+            smilary: [],
+            qty: 1,
+            // checked: 'Hediye Paketi Olsun',
             //checkedGiftpackage: []
         },
         methods: {
@@ -43,37 +43,25 @@ window.addEventListener('load', () => {
                 const item = this.smilary.splice(index, 1);
                 this.productionlist.push(item[0]);
             },
-            //sayı arttırma eksiltme basit hali
-            increase: function() {
-                this.qty++;
-            },
-            decrease: function(){
-                this.qty--;
-            },
-            //ürün sayısı arttırma denemesi, hiç çalışmıyor
-            decreaseToProductionlist(item,index) {
-                if(this.productionlistItems.indexOf(item) == -1){
-                    item.quantity = 1;
-                    this.productionlist.push(item[0]);
-                }
-            },
 
-            //başka bi deneme
-            increase(i) {
-                i.quantity += 1;
-            },
+            //arttırma eksiltme basit
+
             decrease(i) {
-                i.quantity -= 1;
+                i.quantity--;1;
+            },
+            increase(i) {
+                i.quantity++;
+                1;
             }
-            
+
         },
         computed: {
             productionlistTotal() {
-               let total = 0;
-               this.productionlist.forEach((item) => {
-                  total += parseFloat(item.price * item.quantity , 10);
-               });
-                 return total.toFixed(2);
+                let total = 0;
+                this.productionlist.forEach((item) => {
+                    total += parseFloat(item.price * item.quantity, 10);
+                });
+                return total.toFixed(2);
             },
         },
         created() {
@@ -88,6 +76,6 @@ window.addEventListener('load', () => {
                     this.smilary = res.smilary;
                 })
         },
-        
+
     })
 });
