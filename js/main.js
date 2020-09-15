@@ -8,47 +8,73 @@ window.addEventListener('load', () => {
             productionlist: [],
             saved: [],
             smilary:[],
-            counter:1,
+            qty:1,
            // checked: 'Hediye Paketi Olsun',
             //checkedGiftpackage: []
         },
         methods: {
+            //bu sepetten ürün çıkarmak için
             removeFromProductionlist(index) {
                 this.productionlist.splice(index, 1);
             },
+            // Daha sonra alınacaklara atmak için
             saveForLater(index) {
                 const item = this.productionlist.splice(index, 1);
                 this.saved.push(item[0]);
             },
+            // Daha Sonra Alınacaktan silmek için
             removeFromSavedList(index) {
                 this.saved.splice(index);
             },
+
+            //sonradan alınacaklar listesinden sepete...
             moveToProductionlist(index) {
                 const item = this.saved.splice(index, 1);
                 this.productionlist.push(item[0]);
             },
-            increase: function() {
-                this.counter++;
-            },
-            decrease: function() {
-                this.counter--;
-            },
+
+            //Bnzer ürünlerden silme
             removeFromSmilaryList(index) {
                 this.smilary.splice(index);
             },
+
+            //Benzerden Sepete
             moveToProductionlistfromSmilary(index) {
                 const item = this.smilary.splice(index, 1);
                 this.productionlist.push(item[0]);
             },
+            //sayı arttırma eksiltme basit hali
+            increase: function() {
+                this.qty++;
+            },
+            decrease: function(){
+                this.qty--;
+            },
+            //ürün sayısı arttırma denemesi, hiç çalışmıyor
+            decreaseToProductionlist(item,index) {
+                if(this.productionlistItems.indexOf(item) == -1){
+                    item.quantity = 1;
+                    this.productionlist.push(item[0]);
+                }
+            },
+
+            //başka bi deneme
+            increase(i) {
+                i.quantity += 1;
+            },
+            decrease(i) {
+                i.quantity -= 1;
+            }
+            
         },
         computed: {
             productionlistTotal() {
-                let total = 0;
-                this.productionlist.forEach((item) => {
-                    total += parseFloat(item.price, 10);
-                });
-                return total.toFixed(2);
-            }
+               let total = 0;
+               this.productionlist.forEach((item) => {
+                  total += parseFloat(item.price * item.quantity , 10);
+               });
+                 return total.toFixed(2);
+            },
         },
         created() {
             fetch('./data.json')

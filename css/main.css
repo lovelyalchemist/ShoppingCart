@@ -343,7 +343,8 @@ body {
     flex: 2 1 auto;
     padding-right: 24px; }
     .section-shopping-card .shopinglist .list-part ul.productionlist {
-      padding-left: 16px; }
+      padding-left: 16px;
+      margin: 0; }
       @media (max-width: 37.5em) {
         .section-shopping-card .shopinglist .list-part ul.productionlist {
           padding-left: 0; } }

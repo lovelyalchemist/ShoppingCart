@@ -32,12 +32,12 @@
 								<span class="stock-info positive" v-if="item.isAvailable"> Stokta Var</span>
 								<span class="stock-info negative" v-if="!item.isAvailable">Stokta Yok</span>
 								<div class="others">
-									<div class="production-number">
+									<div class="production-number" > 
 										<button type="button" class="button button-number"
-											v-on:click="decrease">-</button>
-										<span class="number">{{ counter }}</span>
+											v-on:click="decrease(item)">-</button>
+										<span class="number">{{item.quantity}}</span>
 										<button type="button" class="button button-number"
-											v-on:click="increase">+</button>
+											v-on:click="increase(item)">+</button>
 									</div>
 									<div class="checkbox info-gift ">
 										<input type="checkbox" id="cb" class="regular-cb info">
@@ -82,7 +82,7 @@
 									<div class="production-number">
 										<button type="button" class="button button-number"
 											v-on:click="decrease">-</button>
-										<span class="number">{{ counter }}</span>
+										<span class="number">{{ qty }}</span>
 										<button type="button" class="button button-number"
 											v-on:click="increase">+</button>
 									</div>

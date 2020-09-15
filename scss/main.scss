@@ -28,6 +28,7 @@ body {
         .list-part {
             ul.productionlist {
                 padding-left: 16px;
+                margin: 0;
                 @include breakpoint(mobile) {
                     padding-left: 0;
                 }
