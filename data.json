@@ -2,14 +2,14 @@
     "productionlist": [{
             "image": "example-picture.jpg",
             "name": "Ürün - 1 Olarak Geçen İsim",
-            "price": "10.00TL",
+            "price": "10.00",
             "quantity": "1",
             "isAvailable": true
         },
         {
             "image": "example-picture2.jpg",
             "name": "Ürün - 2 Olarak Geçen İsim",
-            "price": "189.90TL",
+            "price": "189.90",
             "quantity": "0",
             "isAvailable": false
         }
@@ -18,7 +18,7 @@
         {
             "image": "example-picture.jpg",
             "name": "Ürün - 3 Olarak Geçen İsim",
-            "price": "189.90TL",
+            "price": "189.90",
             "quantity": "1",
             "isAvailable": true
         }
@@ -27,28 +27,28 @@
         {
             "image": "example-picture3.jpg",
             "name": "Ürün - 4 Olarak Geçen İsmi",
-            "price": "12.90TL",
+            "price": "12.90",
             "quantity": "1",
             "isAvailable": true
         },
         {
             "image": "example-picture2.jpg",
             "name": "Ürün - 5 Olarak Geçen İsmi",
-            "price": "42.00TL",
+            "price": "42.00",
             "quantity": "1",
             "isAvailable": true
         },
         {
             "image": "example-picture.jpg",
             "name": "Ürün - 6 Olarak Geçen İsmi",
-            "price": "42.00TL",
+            "price": "42.00",
             "quantity": "1",
             "isAvailable": true
         },
         {
             "image": "example-picture3.jpg",
             "name": "Ürün - 7 Olarak Geçen İsmi",
-            "price": "42.00TL",
+            "price": "42.00",
             "quantity": "1",
             "isAvailable": true
         }

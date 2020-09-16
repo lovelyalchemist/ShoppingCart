@@ -8,7 +8,6 @@ window.addEventListener('load', () => {
             productionlist: [],
             saved: [],
             smilary: [],
-            qty: 1,
             // checked: 'Hediye Paketi Olsun',
             //checkedGiftpackage: []
         },
@@ -59,10 +58,11 @@ window.addEventListener('load', () => {
             productionlistTotal() {
                 let total = 0;
                 this.productionlist.forEach((item) => {
-                    total += parseFloat(item.price * item.quantity, 10);
+                    total += parseFloat((item.price * item.quantity) , 10);
                 });
                 return total.toFixed(2);
             },
+            
         },
         created() {
             fetch('./data.json')
